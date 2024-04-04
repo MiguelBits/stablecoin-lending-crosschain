@@ -1,0 +1,54 @@
+User A deposits and is close to getting liquidated:
+  depositing 1 ether
+  minting 990$
+
+  nextHealth: 1.01
+  $eth price 2000$
+  $eth liq   1980$
+  userA debt 990$
+  userA $eth 2000$
+  updating price to 1980$
+  userA $debt 991.35$
+  userA $eth 1980$
+  userA Health 0.998
+  
+ 1. User B performs full liquidation on user A: 
+  senUSD balance userB 991.35$ 
+  userB Eth 0.55 ether
+  userB $eth 1089$
+  userB senUsd 0
+  
+  userA $debt 0
+  userA $eth 891000000000000000000
+  userA Health 115792089237316195423570985008687907853269984665640564039457584007913129639935 ( meaning infinite, perfect health)
+  userA minted 0
+  userA liqPrice 0
+  userA balance wallet senUSD 980$
+  
+  
+ 2. User B performs partial liquidation on user A, only 100$ out of 500$ debt:
+  depositing 1 ether
+  minting 500$
+  nextHealth: 2.0
+  
+  $eth price 2000$
+  $eth liq   1000$
+  userA debt 500$
+  userA $eth 2000$
+  
+  updating price to 1000$
+  
+  nextHealth: 0.998
+  userA $debt 500.68$
+  
+  user B repays 100.13$ accounting for interest
+  
+  userA $debt 400.54$
+  userA $eth 0.89 ether
+  userA Health 1.11
+  userA minted 400$
+  userA liqPrice 900$
+  userA balance wallet senUSD 495$
+  userB Eth 0.11 ether
+  userB $eth 110$
+  userB senUsd 0
